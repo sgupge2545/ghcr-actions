@@ -6,10 +6,9 @@ services:
       context: .
     working_dir: /app
     volumes:
-      - ./server:/app/server
+      - ./server/main.py:/app/server/main.py
     ports:
       - "8000:80"
     environment:
       - VARIABLE_NAME=app
       - PORT=80
-  
