@@ -13,7 +13,7 @@ COPY ./server ./server
 # Reactビルド成果物をserver/distにコピー
 COPY --from=client-build /client/dist ./server/dist
 
-RUN pip install --no-cache-dir fastapi uvicorn
+RUN pip install --no-cache-dir -r server/requirements.txt
 
 EXPOSE 80
 
