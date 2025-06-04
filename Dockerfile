@@ -18,3 +18,5 @@ RUN pip install --no-cache-dir -r server/requirements.txt
 EXPOSE 80
 
 CMD ["uvicorn", "server.main:app", "--host", "0.0.0.0", "--port", "80", "--reload"]
+
+LABEL org.opencontainers.image.source https://github.com/kiei/mpec
